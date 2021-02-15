@@ -2,4 +2,6 @@
     <string name="app_name">Sample_Animation</string>
     <string name="navigation_drawer_open" />
     <string name="navigation_drawer_close" />
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">Androidstudio23@as.com</string>
 </resources>
