@@ -20,6 +20,10 @@ import android.widget.Toast;
 
 import com.crymzee.amina.sample_animation.Fragments.Blinkfragment;
 import com.crymzee.amina.sample_animation.Fragments.Bouncefragment;
+import com.crymzee.amina.sample_animation.Fragments.Movefragment;
+import com.crymzee.amina.sample_animation.Fragments.Rotatefragment;
+import com.crymzee.amina.sample_animation.Fragments.ZoomInfragment;
+import com.crymzee.amina.sample_animation.Fragments.ZoomOutfragment;
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -72,7 +76,38 @@ public class Navigation_Drawer extends AppCompatActivity implements NavigationVi
                     .replace(R.id.detail_fragment_container, blinkfragment, "bounce frag")
                     .commit();
         }
-
+        else if (id == R.id.nav_zoomin) {
+            Toast.makeText(this, "Zoom In  Fragment", Toast.LENGTH_SHORT).show();
+            ZoomInfragment zoomInfragment= new ZoomInfragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.detail_fragment_container, zoomInfragment, "Zoom In frag")
+                    .commit();
+        }
+        else if (id == R.id.nav_zoomout) {
+            Toast.makeText(this, "Zoom In  Fragment", Toast.LENGTH_SHORT).show();
+            ZoomOutfragment zoomOutfragment= new ZoomOutfragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.detail_fragment_container, zoomOutfragment, "Zoom out frag")
+                    .commit();
+        }
+        else if (id == R.id.nav_rotate) {
+            Toast.makeText(this, "Zoom In  Fragment", Toast.LENGTH_SHORT).show();
+            Rotatefragment rotatefragment= new Rotatefragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.detail_fragment_container, rotatefragment, "Zoom out frag")
+                    .commit();
+        }
+        else if (id == R.id.nav_move) {
+            Toast.makeText(this, "movefragment", Toast.LENGTH_SHORT).show();
+            Movefragment movefragment= new Movefragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.detail_fragment_container, movefragment, "movefragment")
+                    .commit();
+        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

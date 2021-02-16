@@ -5,7 +5,9 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_zoomin"
-            android:title="Zoom In" />
+            android:title="Zoom In"
+            android:drawable="@drawable/menu_background_color_state"
+            android:state_checked="true"/>
         <item
             android:id="@+id/nav_zoomout"
             android:title="Zoom Out" />
